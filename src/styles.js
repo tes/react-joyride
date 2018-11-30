@@ -23,12 +23,6 @@ const buttonReset = {
   WebkitAppearance: 'none',
 };
 
-const spotlight = {
-  borderRadius: 4,
-  position: 'absolute',
-  transition: 'opacity 0.2s',
-};
-
 export default function getStyles(stepStyles) {
   const options = deepmerge(defaultOptions, stepStyles.options || {});
   let width = 290;
@@ -48,16 +42,6 @@ export default function getStyles(stepStyles) {
       width = options.width; //eslint-disable-line prefer-destructuring
     }
   }
-
-  const overlay = {
-    bottom: 0,
-    left: 0,
-    overflow: 'hidden',
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    zIndex: options.zIndex,
-  };
 
   const defaultStyles = {
     beacon: {
@@ -152,20 +136,29 @@ export default function getStyles(stepStyles) {
       fontSize: 14,
     },
     overlay: {
-      ...overlay,
-      backgroundColor: options.overlayColor,
-      mixBlendMode: 'hard-light',
+      bottom: 0,
+      left: 0,
+      overflow: 'hidden',
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: options.zIndex,
     },
     overlayLegacy: {
-      ...overlay,
+      bottom: 0,
+      left: 0,
+      overflow: 'hidden',
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: options.zIndex,
     },
     spotlight: {
-      ...spotlight,
-      backgroundColor: 'gray',
+      position: 'absolute',
     },
     spotlightLegacy: {
-      ...spotlight,
-      boxShadow: `0 0 0 9999px ${options.overlayColor}, ${options.spotlightShadow}`,
+      position: 'absolute',
+      outline: `100vmax ${options.overlayColor} solid`,
     },
     floaterStyles: {
       arrow: {
