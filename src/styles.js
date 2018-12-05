@@ -164,6 +164,7 @@ export default function getStyles(stepStyles) {
     floaterStyles: {
       arrow: {
         color: options.arrowColor,
+        width: '100%',
       },
       floater: {
         zIndex: options.zIndex,
