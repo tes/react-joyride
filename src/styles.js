@@ -155,10 +155,11 @@ export default function getStyles(stepStyles) {
     },
     spotlight: {
       position: 'absolute',
+      outline: `9999px ${options.overlayColor} solid`,
     },
     spotlightLegacy: {
       position: 'absolute',
-      outline: `100vmax ${options.overlayColor} solid`,
+      outline: `9999px ${options.overlayColor} solid`,
     },
     floaterStyles: {
       arrow: {
